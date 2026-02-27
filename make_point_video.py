@@ -63,7 +63,9 @@ def df_to_video(
                 if player_id.startswith("H"):
                     color = Hcolor
                 elif player_id.startswith("A"):
-                    color = Acolor
+                    #For now, only place one team.
+                    continue
+                    #color = Acolor
                 elif player_id.startswith("P"):
                     color = Pcolor
                 else:
