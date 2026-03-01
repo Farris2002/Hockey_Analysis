@@ -55,8 +55,8 @@ ymax = max(df["y"])
 
 time = 200
 # Pick a random player_id
-players = df.loc[df["time"] == time, "player_id"].dropna()
-player_id = players.sample(1).iloc[0]
+players = df.loc[df["time"] == time, "player_id"].dropna().unique()
+player_id = np.random.choice(players)
 #player_id = "A10"
 mask  =(df["time"] == time) & (df["player_id"] == player_id)
 print(df.loc[mask])

@@ -63,9 +63,7 @@ def df_to_video(
                 if player_id.startswith("H"):
                     color = Hcolor
                 elif player_id.startswith("A"):
-                    #For now, only place one team.
-                    continue
-                    #color = Acolor
+                    color = Acolor 
                 elif player_id.startswith("P"):
                     color = Pcolor
                 else:
@@ -141,5 +139,5 @@ xmin = min(df["x"])
 xmax = max(df["x"])
 ymin = min(df["y"])
 ymax = max(df["y"])
-df = df.drop_duplicates(subset=['player_id', 'time'], keep='first')
-df_to_video(df,xmin,xmax,ymin,ymax,"video.mp4",fps = 2)
+#df = df.drop_duplicates(subset=['player_id', 'time'], keep='first')
+df_to_video(df,xmin,xmax,ymin,ymax,"video2.mp4",fps = 30)
